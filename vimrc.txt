@@ -51,7 +51,6 @@ Plug 'chriskempson/base16-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
-" HARPOON!!
 Plug 'mhinz/vim-rfc'
 call plug#end()
 
