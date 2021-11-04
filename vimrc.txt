@@ -1,0 +1,72 @@
+syntax on
+
+set exrc
+set relativenumber
+set nohlsearch
+set hidden
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set nu
+set nowrap
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set scrolloff=9
+set signcolumn=yes
+set encoding=utf-8
+set colorcolumn=80
+
+call plug#begin('~/.vim/plugged')
+Plug 'ambv/black'
+Plug 'nvie/vim-flake8'
+Plug 'vim-syntastic/syntastic'
+
+Plug 'hrsh7th/cmp-buffer'
+
+" Debugger Plugins
+Plug 'szw/vim-maximizer'
+
+" Snippets
+Plug 'rafamadriz/friendly-snippets'
+
+Plug 'rust-lang/rust.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
+Plug 'vim-utils/vim-man'
+Plug 'mbbill/undotree'
+Plug 'tpope/vim-dispatch'
+Plug 'gruvbox-community/gruvbox'
+
+
+Plug 'vim-conf-live/vimconflive2021-colorscheme'
+Plug 'flazz/vim-colorschemes'
+Plug 'chriskempson/base16-vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+" HARPOON!!
+Plug 'mhinz/vim-rfc'
+call plug#end()
+
+au BufNewFile,BufRead *.js, *.html, *.css
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+nmap <C-P> :FZF<CR>
+
+colorscheme gruvbox
+set background=dark
+highlight Normal guibg=None
